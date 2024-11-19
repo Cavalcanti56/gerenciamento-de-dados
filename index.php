@@ -13,7 +13,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
             <!-- adicionar logo -->
-             <img src="#" alt="Sis-agendadors" width="" height="">
+             <img src="#" alt="Sistema-Agenda" width="" height="">
             </a>
             <div class="collapse navbar-collapse" id="conteudonavbarsuportado">
                 <ul class="navbar-nav mr-auto">
@@ -25,7 +25,7 @@
     </div>
     </header>
     <main>
-<div class="conatainer">
+<div class="container">
     <?php
         $menuop = (isset($_GET["menuop"]))?$_GET["menuop"]:"home";
         switch ($menuop) {
@@ -65,7 +65,7 @@
     </div>
     </main>
     <footer class="container-fluid fixed-nottom bg-dark">
-        <div class="text.center">SIS Agendador V 2.0</div>
+        <div class="text.center">Sistema de Agenda</div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
