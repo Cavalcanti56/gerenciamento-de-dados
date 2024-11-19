@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="bg-dark">
-<div class="container">
+<div class="conatainer">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
             <!-- adicionar logo -->
