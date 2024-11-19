@@ -13,12 +13,12 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
             <!-- adicionar logo -->
-             <img src="#" alt="Sistema-Agenda" width="" height="">
+             <img src="css/agenda.png" alt="Sistema-Agenda" width="100px" height="100px">
             </a>
             <div class="collapse navbar-collapse" id="conteudonavbarsuportado">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="index.php?menuop=home">home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php?menuop=contatos">contatos</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="index.php?menuop=home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?menuop=contatos">Contatos</a></li>
                 </ul>
             </div>
         </nav>
