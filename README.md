@@ -8,13 +8,13 @@
 - Cadastro de Contatos:
 Permitir ao usuário adicionar novos contatos com informações como nome, telefone, e-mail, endereço, etc.
 
-Edição de Contatos:
+- Edição de Contatos:
 Oferecer a opção de alterar informações já cadastradas.
 
-Exclusão de Contatos:
+- Exclusão de Contatos:
 A funcionalidade para remover contatos do banco de dados.
 
-Busca de contatos:
+- Busca de contatos:
 Permitir pesquisar contatos por nome ou outras informações
 
 /＞
