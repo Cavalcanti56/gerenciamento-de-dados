@@ -2,19 +2,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilo-padrao.css">
     <title>gerenciamento de dados</title>
 </head>
 <body>
-    <header>
-        <h1>Gerenciamento de dados</h1>
-        <nav>
-            <a href="index.php?menuop=home">home</a>
-            <a href="index.php?menuop=contatos">contatos</a>
-            <a href="index.php?menuop=tarefas">tarefas</a>
-            <a href="index.php?menuop=eventos">eventos</a>
+    <header class="bg-dark">
+<div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+            <!-- adicionar logo -->
+             <img src="#" alt="Sis-agendadors" width="" height="">
+            </a>
+            <div class="collapse navbar-collapse" id="conteudonavbarsuportado">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.php?menuop=home">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?menuop=contatos">contatos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?menuop=tarefas">tarefas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?menuop=eventos">eventos</a></li>
+                </ul>
+            </div>
         </nav>
+    </div>
     </header>
     <main>
+<div class="conatainer">
     <?php
         $menuop = (isset($_GET["menuop"]))?$_GET["menuop"]:"home";
         switch ($menuop) {
@@ -60,7 +73,12 @@
         }
 
     ?>
+    </div>
     </main>
-    
+    <footer class="container-fluid fixed-nottom bg-dark">
+        <div class="text.center">SIS Agendador V 2.0</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </body>
 </html>
