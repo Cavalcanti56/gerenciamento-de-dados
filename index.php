@@ -19,8 +19,6 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="index.php?menuop=home">home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?menuop=contatos">contatos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php?menuop=tarefas">tarefas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php?menuop=eventos">eventos</a></li>
                 </ul>
             </div>
         </nav>
