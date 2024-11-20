@@ -1,6 +1,10 @@
 <?php
+<<<<<<< HEAD
 include("db/conexao.php");
     
+=======
+    include("db/conexao.php");
+>>>>>>> 231ab29785505ac9d397e3d0632b0b0785794a99
 ?>
 <!DOCTYPE html>
 <html lang="PT-BR">
