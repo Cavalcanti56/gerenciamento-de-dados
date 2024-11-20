@@ -1,15 +1,39 @@
 <header>
     <h3>Contatos</h3>
 </header>
-<div>
+<div class="novo-contato">
     <a href="index.php?menuop=cad-contato">Novo Contato</a>
 </div>
+
 <div>
     <form action="index.php?menuop=contatos" method="$_POST">
     <input type="text" name="txt_pesquisa">
     <input type="submit" value="Pesquisar">
     </form>
 </div>
+<style>
+    .novo-contato {
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 20px; /* Adiciona um espaçamento externo */
+}
+
+.novo-contato a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    background-color: #007BFF; /* Cor de fundo azul */
+    color: white; /* Cor do texto branco */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    border-radius: 5px; /* Arredonda os cantos */
+    font-family: Arial, sans-serif; /* Define a fonte */
+    font-size: 16px; /* Tamanho do texto */
+    transition: background-color 0.3s ease; /* Suaviza a transição */
+}
+
+.novo-contato a:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    color: #e6e6e6; /* Cor do texto ao passar o mouse */
+}
+
+</style>
 <table border="1">
     <thead>
         <tr>
@@ -47,7 +71,7 @@
             ELSE 'NÃO ESPECIFICADO'
         END AS sexoContato,
         DATE_FORMAT(dataNascContato, '%d/%m/%Y') AS dataNascContato
-    FROM dbcontatos 
+    FROM tbcontatos 
     WHERE 
     idContato='{$txt_pesquisa}' or
     nomeContato LIKE '%{$txt_pesquisa}%'
