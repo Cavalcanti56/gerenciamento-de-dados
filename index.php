@@ -35,7 +35,7 @@
                         include("paginas/home/home.php");
                         break;
                     case 'contatos':
-                        include("paginas/contatos/contatos.php");
+                        include("paginas/contatos/contato.php");
                         break;
                     case 'cad-contato':
                         include("paginas/contatos/cad-contato.php");
