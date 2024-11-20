@@ -1,13 +1,10 @@
 <header>
     <h3>Contatos</h3>
 </header>
-<<<<<<< HEAD
 <div>
     <a href="index.php?menuop=cad-contato">Criar Contato</a>
-=======
 <div class="novo-contato">
     <a href="index.php?menuop=cad-contato">Novo Contato</a>
->>>>>>> 1034e6f965ac11cd07db1169f643715acbe665c6
 </div>
 
 <div>
@@ -76,10 +73,7 @@
             ELSE 'NÃO ESPECIFICADO'
         END AS sexoContato,
         DATE_FORMAT(dataNascContato, '%d/%m/%Y') AS dataNascContato
-<<<<<<< HEAD
         
-=======
->>>>>>> 1034e6f965ac11cd07db1169f643715acbe665c6
     FROM tbcontatos 
     WHERE 
     idContato='{$txt_pesquisa}' or
