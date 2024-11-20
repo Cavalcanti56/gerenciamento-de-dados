@@ -1,3 +1,6 @@
+<?php
+include(db/conexao.php)
+?>
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
