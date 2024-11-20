@@ -1,5 +1,6 @@
 <?php
-include(db/conexao.php)
+    include(db/conexao.php);
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="PT-BR">
