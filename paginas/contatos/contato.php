@@ -73,10 +73,7 @@
             ELSE 'NÃO ESPECIFICADO'
         END AS sexoContato,
         DATE_FORMAT(dataNascContato, '%d/%m/%Y') AS dataNascContato
-<<<<<<< HEAD
         
-=======
->>>>>>> 1034e6f965ac11cd07db1169f643715acbe665c6
     FROM tbcontatos 
     WHERE 
     idContato='{$txt_pesquisa}' or
