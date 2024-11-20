@@ -1,6 +1,17 @@
 <header>
     <h3>Contatos</h3>
 </header>
+
+<div class="novo-contato">
+    <a href="index.php?menuop=cad-contato">Novo Contato</a>
+</div>
+
+<div class="pesquisa">
+    <form action="index.php?menuop=contatos" method="POST">
+        <input type="text" name="txt_pesquisa" placeholder="Pesquisar contato...">
+        <input type="submit" value="Pesquisar">
+    </form>
+</div>
 <style>
     body {
     font-family: Arial, sans-serif;
@@ -10,6 +21,8 @@
 
 h3 {
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .novo-contato, .pesquisa {
@@ -42,28 +55,64 @@ h3 {
 
 .tabela-contatos {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin: 20px 0;
-}
-
-.tabela-contatos th, .tabela-contatos td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tabela-contatos th {
-    background-color: #f4f4f4;
-    font-weight: bold;
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
-.tabela-contatos tr:nth-child(even) {
+.tabela-contatos td {
+    padding: 12px;
+    font-size: 13px;
+    color: #333;
     background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
 }
 
-.tabela-contatos tr:hover {
-    background-color: #f1f1f1;
+.tabela-contatos tr:nth-child(even) td {
+    background-color: #f3f3f3;
 }
+
+.tabela-contatos tr:hover td {
+    background-color: #e9f5ff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tabela-contatos a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.tabela-contatos a:hover {
+    background-color: #218838;
+}
+
+.tabela-contatos .btn-excluir {
+    background-color: #dc3545;
+}
+
+.tabela-contatos .btn-excluir:hover {
+    background-color: #c82333;
+}
+
 
 .paginacao {
     text-align: center;
@@ -86,16 +135,6 @@ h3 {
 }
 
 </style>
-<div class="novo-contato">
-    <a href="index.php?menuop=cad-contato">Novo Contato</a>
-</div>
-
-<div class="pesquisa">
-    <form action="index.php?menuop=contatos" method="POST">
-        <input type="text" name="txt_pesquisa" placeholder="Pesquisar contato...">
-        <input type="submit" value="Pesquisar">
-    </form>
-</div>
 
 <table class="tabela-contatos">
     <thead>
@@ -114,20 +153,20 @@ h3 {
     <tbody>
         <?php
         $quantidade = 10;
-        $pagina = (isset($_GET['pagina'])) ? (int)$_GET['pagina'] : 1;
+        $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
         $inicio = ($quantidade * $pagina) - $quantidade;
-        $txt_pesquisa = (isset($_POST["txt_pesquisa"])) ? $_POST["txt_pesquisa"] : "";
+        $txt_pesquisa = isset($_POST["txt_pesquisa"]) ? $_POST["txt_pesquisa"] : "";
 
         $sql = "SELECT
             idContato,
-            upper(nomeContato) AS nomeContato,
-            lower(emailContato) AS emailContato,
+            UPPER(nomeContato) AS nomeContato,
+            LOWER(emailContato) AS emailContato,
             telefoneContato,
-            upper(enderecoContato) AS enderecoContato,
+            UPPER(enderecoContato) AS enderecoContato,
             CASE
-                WHEN sexoContato = 'F' THEN 'FEMININO'
-                WHEN sexoContato = 'M' THEN 'MASCULINO'
-                ELSE 'NÃO ESPECIFICADO'
+                WHEN sexoContato = 'F' THEN 'Feminino'
+                WHEN sexoContato = 'M' THEN 'Masculino'
+                ELSE 'Não Especificado'
             END AS sexoContato,
             DATE_FORMAT(dataNascContato, '%d/%m/%Y') AS dataNascContato
         FROM tbcontatos
@@ -152,7 +191,6 @@ h3 {
         <?php } ?>
     </tbody>
 </table>
-<br>
 
 <div class="paginacao">
     <?php
@@ -161,8 +199,8 @@ h3 {
     $numtotal = mysqli_num_rows($qrtotal);
     $totalpagina = ceil($numtotal / $quantidade);
 
-    echo "Total de registros: $numtotal <br>";
-    echo '<a href="?menuop=contatos&pagina=1">Primeira página</a> ';
+    echo "<p>Total de registros: $numtotal</p>";
+    echo '<a href="?menuop=contatos&pagina=1">Primeira página</a>';
 
     if ($pagina > 6) {
         echo '<a href="?menuop=contatos&pagina=' . ($pagina - 1) . '"> << </a>';
@@ -171,9 +209,9 @@ h3 {
     for ($i = 1; $i <= $totalpagina; $i++) {
         if ($i >= ($pagina - 5) && $i <= ($pagina + 5)) {
             if ($i == $pagina) {
-                echo "<span class='pagina-atual'>$i</span> ";
+                echo "<span class='pagina-atual'>$i</span>";
             } else {
-                echo "<a href=\"?menuop=contatos&pagina=$i\">$i</a> ";
+                echo "<a href=\"?menuop=contatos&pagina=$i\">$i</a>";
             }
         }
     }
