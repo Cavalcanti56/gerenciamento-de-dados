@@ -1,8 +1,6 @@
 <header>
     <h3>Contatos</h3>
 </header>
-<div>
-    <a href="index.php?menuop=cad-contato">Criar Contato</a>
 <div class="novo-contato">
     <a href="index.php?menuop=cad-contato">Novo Contato</a>
 </div>
