@@ -1,10 +1,6 @@
 <?php
-<<<<<<< HEAD
-include("db/conexao.php");
-=======
     include("./db/conexao.php");
     session_start();
->>>>>>> 3a0d6bfbbd2010d9b7eff1da1eb153643e7dfa7e
 ?>
 <!DOCTYPE html>
 <html lang="PT-BR">
