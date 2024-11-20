@@ -1,7 +1,7 @@
 <?php
 $idcontato = $_GET["idContato"];
 
-$sql = "SELECT * FRON tbcontatos WHERE idContato= {$idContato}";
+$sql = "SELECT * FROM tbcontatos WHERE idContato= {$idContato}";
 $rs = mysqli_query($conexao,$sql) or die("Erro ao recuperar os dados do registro." .mysqli_error($conexao));
 $dados = mysqli_fetch_assoc($rs);
 ?>
@@ -39,7 +39,7 @@ $dados = mysqli_fetch_assoc($rs);
     <label for="dataNascContato">Data de Nascimento</label>
     <input type="date" name= "dataNascContato" value="<?=$dados["dataNascContato"]?>>
     <div>
-        <input type="submit" value="atualizar"name = "btnAtualizar">
+        <input type="submit" value="Atualizar"name = "btnAtualizar">
     </div>
 </div>
     </form>
