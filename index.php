@@ -35,22 +35,22 @@
                         include("paginas/home/home.php");
                         break;
                     case 'contato':
-                        include("paginas/contatos/contato.php");
+                        include("paginas/contato/contato.php");
                         break;
                     case 'cad-contato':
-                        include("paginas/contatos/cad-contato.php");
+                        include("paginas/contato/cad-contato.php");
                         break;
                     case 'inserir-contato':
-                        include("paginas/contatos/inserir-contato.php");
+                        include("paginas/contato/inserir-contato.php");
                         break;
                     case 'editar-contato':
-                        include("paginas/contatos/editar-contato.php");
+                        include("paginas/contato/editar-contato.php");
                         break;
                     case 'excluir-contato':
-                        include("paginas/contatos/excluir-contato.php");
+                        include("paginas/contato/excluir-contato.php");
                         break;
                     case 'atualizar-contato':
-                        include("paginas/contatos/atualizar-contato.php");
+                        include("paginas/contato/atualizar-contato.php");
                         break;
                     default:
                         include("paginas/home/home.php");
