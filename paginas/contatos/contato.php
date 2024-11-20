@@ -2,7 +2,7 @@
     <h3>Contatos</h3>
 </header>
 <div>
-    <a href="index.php?menuop=cad-contato">Novo Contato</a>
+    <a href="index.php?menuop=cad-contato">Criar Contato</a>
 </div>
 <div>
     <form action="index.php?menuop=contatos" method="$_POST">
@@ -47,7 +47,8 @@
             ELSE 'NÃO ESPECIFICADO'
         END AS sexoContato,
         DATE_FORMAT(dataNascContato, '%d/%m/%Y') AS dataNascContato
-    FROM dbcontatos 
+        
+    FROM tbcontatos 
     WHERE 
     idContato='{$txt_pesquisa}' or
     nomeContato LIKE '%{$txt_pesquisa}%'

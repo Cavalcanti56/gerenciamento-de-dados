@@ -5,17 +5,22 @@
   $nomeContato = mysqli_real_escape_string($conexao, $_POST["nomeContato"]); 
   $emailContato = mysqli_real_escape_string($conexao, $_POST["emailContato"]); 
   $telefoneContato = mysqli_real_escape_string($conexao, $_POST["telefoneContato"]); 
-  $sexoContato = mysqli_real_escape_string($conexao, $_POST["sexoContato"]); 
   $enderecoContato = mysqli_real_escape_string($conexao, $_POST["enderecoContato"]); 
+  $sexoContato = mysqli_real_escape_string($conexao, $_POST["sexoContato"]); 
   $dataNascContato = mysqli_real_escape_string($conexao, $_POST["dataNascContato"]); 
-  $sql = "INSERT INTO dbcontatos (
+
+//   Foi utilizada uma função para limpar a string de caracteres inválidos para o BD, previnindo o SQL Injection.
+
+  $sql = "INSERT INTO tbcontatos (
    nomeContato,
    emailContato,
    enderecoContato, 
    telefoneContato, 
    sexoContato,
-   dataNascContato)
-   VALUES(
+   dataNascContato
+   )
+
+   VALUES (
     '{$nomeContato}',
     '{$emailContato}',
     '{$telefoneContato}',
@@ -24,6 +29,6 @@
     '{$dataNascContato}'
    )
    ";
-    mysqli_query($conexao,$sql) or die ("Erro ao executar a consulta!" . mysqli_error($conexao));
-    echo "O registro foi inserido com sucesso!";
+    mysqli_query($conexao,$sql) or die ("Erro ao criar o contato!" . mysqli_error($conexao));
+    echo "O contato foi inserido com sucesso!";
 ?>
