@@ -9,6 +9,7 @@
   $sexoContato = mysqli_real_escape_string($conexao, $_POST["sexoContato"]); 
   $enderecoContato = mysqli_real_escape_string($conexao, $_POST["enderecoContato"]); 
   $dataNascContato = mysqli_real_escape_string($conexao, $_POST["dataNascContato"]); 
+  
   $sql = "UPDATE tbcontatos SET
   nomeContato = '{$nomeContato}',
   emailContato = '{$emailContato}',

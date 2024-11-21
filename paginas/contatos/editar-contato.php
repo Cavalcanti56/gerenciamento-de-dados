@@ -5,10 +5,6 @@ $sql = "SELECT * FROM tbcontatos WHERE idContato = '{$idContato}'";
 $rs = mysqli_query($conexao, $sql) or die("Erro ao recuperar os dados do registro: " . mysqli_error($conexao));
 $dados = mysqli_fetch_assoc($rs);
 ?>
-
-
-
-
 <header>
     <h3>Editar Contato</h3>
 </header>
@@ -17,7 +13,7 @@ $dados = mysqli_fetch_assoc($rs);
     <form action="index.php?menuop=atualizar-contato" method="post">
         <div>
             <label for="idContato">ID</label>
-            <input type="text" name="idContato" id="idContato" value="<?= $dados["idContato"] ?>" readonly>
+            <input type="text" name="idContato" id="idContato" value="<?= $dados["idContato"] ?>">
         </div>
         <div>
             <label for="nomeContato">Nome</label>

@@ -157,22 +157,21 @@ h3 {
         $inicio = ($quantidade * $pagina) - $quantidade;
         $txt_pesquisa = isset($_POST["txt_pesquisa"]) ? $_POST["txt_pesquisa"] : "";
 
-        $sql = "SELECT
+        $sql = "SELECT 
             idContato,
-            UPPER(nomeContato) AS nomeContato,
-            LOWER(emailContato) AS emailContato,
+            upper(nomeContato) AS nomeContato,
+            lower(emailContato) AS emailContato,
             telefoneContato,
-            UPPER(enderecoContato) AS enderecoContato,
+            upper(enderecoContato) AS enderecoContato,
             CASE
-                WHEN sexoContato = 'F' THEN 'Feminino'
-                WHEN sexoContato = 'M' THEN 'Masculino'
-                ELSE 'Não Especificado'
+                WHEN sexoContato='F' THEN 'FEMININO'
+                WHEN sexoContato='M' THEN 'MASCULINO'
+            ELSE
+                'NÃO ESPECIFICADO'
             END AS sexoContato,
             DATE_FORMAT(dataNascContato, '%d/%m/%Y') AS dataNascContato
-        FROM tbcontatos
-        WHERE idContato='{$txt_pesquisa}' OR nomeContato LIKE '%{$txt_pesquisa}%'
-        ORDER BY nomeContato ASC
-        LIMIT $inicio, $quantidade";
+            FROM tbcontatos
+            ";
 
         $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta! " . mysqli_error($conexao));
         while ($dados = mysqli_fetch_assoc($rs)) {
@@ -185,8 +184,8 @@ h3 {
             <td><?= $dados["enderecoContato"] ?></td>
             <td><?= $dados["sexoContato"] ?></td>
             <td><?= $dados["dataNascContato"] ?></td>
-            <td><a href="index.php?menuop=editar-contato&idcontato=<?= $dados["idContato"] ?>">Editar</a></td>
-            <td><a href="index.php?menuop=excluir-contato&idcontato=<?= $dados["idContato"] ?>">Excluir</a></td>
+            <td><a href="index.php?menuop=editar-contato&idContato=<?= $dados['idContato'] ?>">Editar</a></td>
+            <td><a href="index.php?menuop=excluir-contato&idContato=<?= $dados["idContato"] ?>">Excluir</a></td>
         </tr>
         <?php } ?>
     </tbody>
