@@ -198,7 +198,7 @@ h3 {
     $numtotal = mysqli_num_rows($qrtotal);
     $totalpagina = ceil($numtotal / $quantidade);
 
-    echo "<p>Total de registros: $numtotal</p>";
+    echo "<p>$numtotal contatos</p>";
     echo '<a href="?menuop=contatos&pagina=1">Primeira página</a>';
 
     if ($pagina > 6) {
