@@ -139,7 +139,7 @@ h3 {
 <table class="tabela-contatos">
     <thead>
         <tr>
-            <th>ID</th>
+            
             <th>Nome</th>
             <th>Email</th>
             <th>Telefone</th>
@@ -177,7 +177,7 @@ h3 {
         while ($dados = mysqli_fetch_assoc($rs)) {
         ?>
         <tr>
-            <td><?= $dados["idContato"] ?></td>
+            
             <td><?= $dados["nomeContato"] ?></td>
             <td><?= $dados["emailContato"] ?></td>
             <td><?= $dados["telefoneContato"] ?></td>
