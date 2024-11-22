@@ -203,6 +203,7 @@ h3 {
 
     if ($pagina > 6) {
         echo '<a href="?menuop=contatos&pagina=' . ($pagina - 1) . '"> << </a>';
+        // oiiiiiiiiiii
     }
 
     for ($i = 1; $i <= $totalpagina; $i++) {
