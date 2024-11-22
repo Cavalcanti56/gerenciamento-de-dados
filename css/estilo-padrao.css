@@ -1,0 +1,8 @@
+body{
+    background-color: #3b4147;
+    color: white;
+}
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+}
