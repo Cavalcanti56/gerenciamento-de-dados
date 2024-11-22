@@ -14,9 +14,9 @@
   nomeContato = '{$nomeContato}',
   emailContato = '{$emailContato}',
   telefoneContato = '{$telefoneContato}',
-  sexoContato = '{$sexoContato}',
   enderecoContato = '{$enderecoContato}',
-  dataNascContato = '{$dataNascContato}',
+  sexoContato = '{$sexoContato}',
+  dataNascContato = '{$dataNascContato}'
   WHERE idContato = '{$idContato}'
   ";
     mysqli_query($conexao,$sql) or die ("Erro ao executar a consulta!" . mysqli_error($conexao));
