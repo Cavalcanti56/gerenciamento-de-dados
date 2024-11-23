@@ -1,16 +1,3 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    
-    $resposta = $_POST['resposta'];  
-    header('Location: cad-contatos.php');  
-    exit();
-}
-
-
-?>
-
-
-
 
 <header>
     <h3>Cadastro de Contatos</h3>
