@@ -1,49 +1,9 @@
-<?php
-
-session_start();
-$mensagem = '';
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    $resposta = $_POST['resposta'];
-
-$mensagem = "Contato inserido com sucesso: $resposta";
-$_SESSION['mensagem'] = $mensagem;
-
-header("location: {$_SERVER['PHP_SELF']}");
-exit();
-
-
-}
-
-$menuop = isset($_GET['menuop']) ? $_GET['menuop'] : 'home';
-
-switch ($menuop) {
-    case 'home':
-        
-        break;
-    case 'cad-contato':
-        
-        break;
-    
-}
-?>
-
 
 <header>
     <h3>Cadastro de Contatos</h3>
 <div>
 
-<?php
-if (isset($_SESSION['mensagem'])) {
-    echo "<p style='color: green; font-weight: bold;'>{$_SESSION['mensagem']}</p>";
-    
-    
-    unset($_SESSION['mensagem']);
-}
-?>
-
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form action="index.php?menuop=inserir-contato" method="post">
 <div>
     <label for="nomeContato">Nome:</label>
     <input type="text" name= "nomeContato">
