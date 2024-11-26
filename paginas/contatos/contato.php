@@ -155,7 +155,8 @@ h3 {
         $quantidade = 10;
         $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
         $inicio = ($quantidade * $pagina) - $quantidade;
-        $txt_pesquisa = isset($_POST["txt_pesquisa"]) ? $_POST["txt_pesquisa"] : "";
+
+        $txt_pesquisa = (isset($_POST["txt_pesquisa"])) ? $_POST["txt_pesquisa"] : "";
 
         $sql = "SELECT 
             idContato,
@@ -170,7 +171,10 @@ h3 {
                 'NÃO ESPECIFICADO'
             END AS sexoContato,
             DATE_FORMAT(dataNascContato, '%d/%m/%Y') AS dataNascContato
-            FROM tbcontatos
+            FROM tbcontatos 
+            WHERE
+            idContato='{$txt_pesquisa}' or
+            nomeContato LIKE '%{$txt_pesquisa}%' 
             ";
 
         $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta! " . mysqli_error($conexao));
