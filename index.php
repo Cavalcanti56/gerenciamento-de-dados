@@ -56,7 +56,7 @@ include("./db/conexao.php");
                     include("./paginas/contatos/excluir-contato.php");
                     break;
             default:
-                include("paginas/home/");
+                include("paginas/home/home.php");
                 break;
         }
 
