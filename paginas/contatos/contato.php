@@ -114,47 +114,44 @@ h3 {
 }
 
 
-.paginacao {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-}
+<style>
+    .paginacao {
+        background-color: #2c2c2c; /* Fundo escuro */
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        color: #fff; /* Texto branco */
+        font-family: Arial, sans-serif;
+    }
 
-.paginacao p {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
-}
+    .paginacao a {
+        color: #1e90ff; /* Cor dos links */
+        text-decoration: none;
+        margin: 0 5px;
+        padding: 5px 10px;
+        border: 1px solid #1e90ff; /* Borda azul */
+        border-radius: 4px;
+        transition: background-color 0.3s, color 0.3s;
+    }
 
-.link-paginacao {
-    text-decoration: none;
-    color: #007bff;
-    padding: 5px 10px;
-    border: 1px solid #007bff;
-    border-radius: 3px;
-    transition: background-color 0.3s, color 0.3s;
-}
+    .paginacao a:hover {
+        background-color: #1e90ff; /* Fundo azul ao passar o mouse */
+        color: #fff; /* Texto branco ao passar o mouse */
+    }
 
-.link-paginacao:hover {
-    background-color: #007bff;
-    color: #fff;
-}
+    .paginacao .pagina-atual {
+        background-color: #4caf50; /* Fundo verde para página atual */
+        color: #fff; /* Texto branco */
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin: 0 5px;
+    }
 
-.pagina-atual {
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    padding: 5px 10px;
-    border-radius: 3px;
-    border: 1px solid #007bff;
-}
+    .paginacao p {
+        margin: 10px 0;
+        font-size: 14px;
+    }
 
 
 </style>
