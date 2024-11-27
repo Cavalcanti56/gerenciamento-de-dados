@@ -8,7 +8,7 @@
         /* Estilo global */
         body {
             font-family: Arial, sans-serif;
-            background-color: #121212;
+            background-color: rgb(18, 18, 18);
             color: #ffffff;
             margin: 0;
             padding: 0;
@@ -47,7 +47,7 @@
         }
 
         .message.success {
-            color: #00bcd4; /* Azul claro para mensagens de sucesso */
+            color: greenyellow; /* Azul claro para mensagens de sucesso */
             
         }
 
@@ -67,9 +67,9 @@
 
         // Execução da consulta
         if (mysqli_query($conexao, $sql)) {
-            echo '<div class="message success">Registro excluído com sucesso!</div>';
+            echo '<div class="message success">O contato foi excluído com sucesso!</div>';
         } else {
-            echo '<div class="message error">Erro ao excluir o registro: ' . mysqli_error($conexao) . '</div>';
+            echo '<div class="message error">Erro ao excluir o contato: ' . mysqli_error($conexao) . '</div>';
         }
         ?>
     </div>

@@ -41,6 +41,6 @@
   dataNascContato = '{$dataNascContato}'
   WHERE idContato = '{$idContato}'
   ";
-    mysqli_query($conexao,$sql) or die ("Erro ao executar a consulta!" . mysqli_error($conexao));
-    echo '<div class="message-up">O registro foi atualizado com sucesso!</div>';
+    mysqli_query($conexao,$sql) or die ("Erro ao atualizar contato!" . mysqli_error($conexao));
+    echo '<div class="message-up">O contato foi atualizado com sucesso!</div>';
 ?>

@@ -34,7 +34,9 @@ include("./db/conexao.php");
         width: 100%;
         margin: 0 auto;
     }
-   
+    main {
+        margin-bottom: 60px;
+    }
     </style>
 </head>
 <body>

@@ -55,7 +55,7 @@
           '{$dataNascContato}'
         )
         ";mysqli_query($conexao,$sql) or die ("Erro ao criar o contato!" . mysqli_error($conexao));
-          echo "O contato foi inserido com sucesso!";
+          echo "O contato foi criado com sucesso!";
 
       ?>
 
