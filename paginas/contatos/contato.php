@@ -1,4 +1,4 @@
-<h3>Contatos</h3>
+<h3><i class="bi bi-person-square"></i>Contatos</h3>
 </header>
 
 
@@ -7,6 +7,7 @@
     <form action="index.php?menuop=contatos" method="POST">
         <input type="text" name="txt_pesquisa" placeholder="Pesquisar contato...">
         <input type="submit" value="Pesquisar">
+        
     </form>
 </div>
 <style>
@@ -17,7 +18,7 @@
 }
 
 h3 {
-    text-align: center;
+    text-align: left;
     color: white;
     margin-bottom: 20px;
 }
@@ -268,5 +269,5 @@ h3 {
     ?>
 </div>
 <div class="novo-contato">
-    <a href="index.php?menuop=cad-contato">Novo Contato</a>
+    <a href="index.php?menuop=cad-contato"><i class="bi bi-person-plus"></i>Novo Contato</a>
 </div>
