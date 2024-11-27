@@ -113,11 +113,12 @@ h3 {
 }
 
 .tabela-contatos .btn-excluir {
-    background-color: #e53935; /* Vermelho escuro */
+   background-color: red; /* Vermelho escuro */
 }
 
 .tabela-contatos .btn-excluir:hover {
     background-color: #c62828; /* Tom mais escuro ao passar o mouse */
+
 }
 
 <style>
@@ -157,6 +158,7 @@ h3 {
     .paginacao p {
         margin: 10px 0;
         font-size: 14px;
+        
     }
 
 
@@ -215,8 +217,8 @@ h3 {
             <td><?= $dados["enderecoContato"] ?></td>
             <td><?= $dados["sexoContato"] ?></td>
             <td><?= $dados["dataNascContato"] ?></td>
-            <td><a href="index.php?menuop=editar-contato&idContato=<?= $dados['idContato'] ?>">Editar</a></td>
-            <td><a href="index.php?menuop=excluir-contato&idContato=<?= $dados["idContato"] ?>">Excluir</a></td>
+            <td><a class="btn btn-outline-warning btn-sn" href="index.php?menuop=editar-contato&idContato=<?= $dados['idContato'] ?>"><i class="bi bi-pencil-square"></i></a></td>
+            <td><a class="btn btn-outline-danger btn-sn" href="index.php?menuop=excluir-contato&idContato=<?= $dados["idContato"] ?>"><i class="bi bi-trash3"></i></a></td>
         </tr>
         <?php } ?>
     </tbody>

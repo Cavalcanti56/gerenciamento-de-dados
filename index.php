@@ -10,6 +10,7 @@ include("./db/conexao.php");
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilo-padrao.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Gerenciamento de contatos pessoais</title>
 </head>
 <body>
@@ -23,8 +24,8 @@ include("./db/conexao.php");
             </a>
             <div class="collapse navbar-collapse" id="conteudonavbarsuportado">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="index.php?menuop=home">home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php?menuop=contatos">contatos</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="index.php?menuop=home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?menuop=contatos">Contatos</a></li>
                 </ul>
             </div>
         </nav>
