@@ -18,3 +18,10 @@ A funcionalidade para remover contatos do banco de dados.
 Permitir pesquisar contatos por nome ou outras informações
 
 />
+Desenvolvido por:
+Artur Lobo,
+Bernardo Barcellos,
+Bruno Nathan,
+José Carlos,
+Gabriel Arthur e
+Rafael Luna.
