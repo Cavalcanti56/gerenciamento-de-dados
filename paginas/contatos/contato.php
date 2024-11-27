@@ -1,7 +1,9 @@
 <h3><i class="bi bi-person-square"> </i>Contatos</h3>
 </header>
 
-
+<div class="novo-contato">
+    <a href="index.php?menuop=cad-contato"><i class="bi bi-person-plus"></i>Novo Contato</a>
+</div>
 
 <div class="pesquisa">
     <form action="index.php?menuop=contatos" method="POST">
@@ -24,7 +26,7 @@ h3 {
 }
 
 .novo-contato {
-    text-align: center;
+    text-align: left;
     margin: 20px 0;
 }
 
@@ -267,7 +269,4 @@ h3 {
     // Link para a última página
     echo "<a href=\"?menuop=contatos&pagina=$totalpagina\" class=\"link-paginacao\">Última página</a>";
     ?>
-</div>
-<div class="novo-contato">
-    <a href="index.php?menuop=cad-contato"><i class="bi bi-person-plus"></i>Novo Contato</a>
 </div>

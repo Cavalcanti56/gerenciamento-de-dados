@@ -34,12 +34,12 @@ include("./db/conexao.php");
         width: 100%;
         margin: 0 auto;
     }
+   
     </style>
 </head>
 <body>
     <header class="bg-dark custom-navbar">
 <div class="container">
-       <h1>Gerenciador de Contatos</h1>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
             <a class="navbar-brand" href="#">
             <!-- adicionar logo -->
