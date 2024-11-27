@@ -198,6 +198,7 @@ h3 {
             WHERE
             idContato='{$txt_pesquisa}' or
             nomeContato LIKE '%{$txt_pesquisa}%' 
+            LIMIT $inicio, $quantidade
             ";
 
         $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta! " . mysqli_error($conexao));
@@ -221,6 +222,10 @@ h3 {
 <div class="paginacao">
     <?php
     // Consulta total de contatos
+    $quantidade = 10;
+    $pagina = ( isset($_GET['pagina']) ) ?(int)$_GET['pagina']:1;
+    $inicio = ($quantidade * $pagina) - $quantidade;
+
     $sqltotal = "SELECT idContato FROM tbcontatos";
     $qrtotal = mysqli_query($conexao, $sqltotal) or die(mysqli_error($conexao));
     $numtotal = mysqli_num_rows($qrtotal);
