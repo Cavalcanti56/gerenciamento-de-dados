@@ -11,13 +11,24 @@
       align-items: center;
       color: white;
       margin-top: 50px;
+      display: flex;
     }
     p {
       display: flex;
       flex-direction: column;
       align-items: center;
       color: white;
-
+    }
+    div.sucess {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      color: greenyellow;
     }
   </style>
 </head>
@@ -55,7 +66,7 @@
           '{$dataNascContato}'
         )
         ";mysqli_query($conexao,$sql) or die ("Erro ao criar o contato!" . mysqli_error($conexao));
-          echo "O contato foi criado com sucesso!";
+          echo "<div class='sucess'>O contato foi criado com sucesso!</div>";
 
       ?>
 
