@@ -15,6 +15,7 @@ include("./db/conexao.php");
 <body>
     <header class="bg-dark">
 <div class="container">
+       <h1>Gerenciador de Contatos</h1>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
             <!-- adicionar logo -->

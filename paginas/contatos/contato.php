@@ -25,7 +25,7 @@ h3 {
     margin-bottom: 20px;
 }
 
-.novo-contato, .pesquisa {
+.novo-contato {
     text-align: center;
     margin: 20px 0;
 }
@@ -44,6 +44,11 @@ h3 {
 .novo-contato a:hover, .pesquisa input[type="submit"]:hover {
     background-color: #0056b3;
 }
+.pesquisa form {
+    display: flex; /* Alinha os elementos horizontalmente */
+    gap: 10px; /* Espaço entre os elementos */
+}
+
 
 .pesquisa input[type="text"] {
     padding: 10px;
@@ -52,18 +57,23 @@ h3 {
     border-radius: 5px;
     margin-right: 10px;
 }
+.pesquisa{
+    text-align: left; /* Alinha a barra de pesquisa à esquerda */
+    margin: 20px 0;
+}
 
 .tabela-contatos {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
     margin: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ajuste de sombra para combinar com o tema escuro */
+    background-color: #1e1e1e; /* Fundo geral da tabela */
 }
 
 .tabela-contatos th {
-    background-color: #007BFF;
-    color: white;
+    background-color: #333333; /* Fundo do cabeçalho */
+    color: #ffffff; /* Texto claro para contraste */
     padding: 15px;
     text-align: left;
     font-size: 14px;
@@ -75,18 +85,18 @@ h3 {
 .tabela-contatos td {
     padding: 12px;
     font-size: 13px;
-    color: #333;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
+    color: #e0e0e0; /* Texto claro para células */
+    background-color: #2b2b2b; /* Fundo das células */
+    border-bottom: 1px solid #444444; /* Bordas discretas */
     vertical-align: middle;
 }
 
 .tabela-contatos tr:nth-child(even) td {
-    background-color: #f3f3f3;
+    background-color: #242424; /* Fundo alternado para linhas pares */
 }
 
 .tabela-contatos tr:hover td {
-    background-color: #e9f5ff;
+    background-color: #3a3a3a; /* Fundo ao passar o mouse */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -95,24 +105,23 @@ h3 {
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 4px;
-    background-color: #28a745;
+    background-color: #03a9f4; /* Azul vibrante para links */
     color: white;
     font-size: 12px;
     transition: background-color 0.3s ease;
 }
 
 .tabela-contatos a:hover {
-    background-color: #218838;
+    background-color: #0288d1; /* Tom mais escuro ao passar o mouse */
 }
 
 .tabela-contatos .btn-excluir {
-    background-color: #dc3545;
+    background-color: #e53935; /* Vermelho escuro */
 }
 
 .tabela-contatos .btn-excluir:hover {
-    background-color: #c82333;
+    background-color: #c62828; /* Tom mais escuro ao passar o mouse */
 }
-
 
 <style>
     .paginacao {
