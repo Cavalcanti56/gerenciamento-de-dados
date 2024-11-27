@@ -9,8 +9,11 @@ include("./db/conexao.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/estilo-padrao.css">
+    <link rel="stylesheet" href="/css/estilo-padrao.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@900&display=swap');
+    </style>
     <title>Gerenciamento de contatos pessoais</title>
     
     <style>
@@ -18,14 +21,26 @@ include("./db/conexao.php");
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #3b4147;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .custom-navbar {
+        max-width: 1500px;
+        width: 100%;
+        margin: 0 auto;
     }
     </style>
 </head>
 <body>
-    <header class="bg-dark">
+    <header class="bg-dark custom-navbar">
 <div class="container">
        <h1>Gerenciador de Contatos</h1>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
             <a class="navbar-brand" href="#">
             <!-- adicionar logo -->
              <img src="css/agenda.png" alt="Sistema-Agenda" width="100px" height="100px">

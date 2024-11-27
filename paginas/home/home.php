@@ -1,7 +1,7 @@
 <style>
 
 </style>
-
+<br>
 <h3>Pagina Inicial</h3>
 <hr>
 <h2>Então, o oque seria um contato?</h2>

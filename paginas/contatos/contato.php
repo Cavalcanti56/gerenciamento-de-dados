@@ -1,4 +1,4 @@
-<h3><i class="bi bi-person-square"></i>Contatos</h3>
+<h3><i class="bi bi-person-square"> </i>Contatos</h3>
 </header>
 
 
