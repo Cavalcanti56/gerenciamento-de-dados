@@ -1,10 +1,7 @@
-<header>
-    <h3>Contatos</h3>
+<h3>Contatos</h3>
 </header>
 
-<div class="novo-contato">
-    <a href="index.php?menuop=cad-contato">Novo Contato</a>
-</div>
+
 
 <div class="pesquisa">
     <form action="index.php?menuop=contatos" method="POST">
@@ -21,7 +18,7 @@
 
 h3 {
     text-align: center;
-    color: #333;
+    color: white;
     margin-bottom: 20px;
 }
 
@@ -267,4 +264,7 @@ h3 {
     // Link para a última página
     echo "<a href=\"?menuop=contatos&pagina=$totalpagina\" class=\"link-paginacao\">Última página</a>";
     ?>
+</div>
+<div class="novo-contato">
+    <a href="index.php?menuop=cad-contato">Novo Contato</a>
 </div>
