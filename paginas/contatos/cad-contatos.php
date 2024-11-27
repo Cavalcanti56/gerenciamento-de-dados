@@ -16,6 +16,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            gap: 50px;
         }
 
         header h3 {

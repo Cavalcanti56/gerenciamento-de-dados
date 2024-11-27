@@ -16,7 +16,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
         }
 
         header {
@@ -44,10 +43,12 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
             width: 100%;
             max-width: 600px;
+            margin-top: 200px;
         }
 
         .message.success {
             color: #00bcd4; /* Azul claro para mensagens de sucesso */
+            
         }
 
         .message.error {

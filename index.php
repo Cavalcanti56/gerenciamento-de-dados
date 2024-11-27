@@ -88,6 +88,7 @@ include("./db/conexao.php");
     ?>
     </div>
     </main>
+    <br><br><br>
     <footer class="container-fluid fixed-bottom bg-dark">
         <div class="text-center text-white py-2">Sistema de Gerenciamento de Contatos</div>
     </footer>

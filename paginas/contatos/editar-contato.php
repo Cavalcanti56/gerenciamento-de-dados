@@ -16,6 +16,7 @@ $dados = mysqli_fetch_assoc($rs);
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            gap: 20px;
         }
 
         header {
