@@ -115,24 +115,47 @@ h3 {
 
 
 .paginacao {
-    text-align: center;
-    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
 }
 
-.paginacao a {
-    margin: 0 5px;
+.paginacao p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.link-paginacao {
     text-decoration: none;
-    color: #007BFF;
+    color: #007bff;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.paginacao a:hover {
-    text-decoration: underline;
+.link-paginacao:hover {
+    background-color: #007bff;
+    color: #fff;
 }
 
 .pagina-atual {
     font-weight: bold;
-    color: #333;
+    color: #fff;
+    background-color: #007bff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #007bff;
 }
+
 
 </style>
 
@@ -197,33 +220,40 @@ h3 {
 
 <div class="paginacao">
     <?php
+    // Consulta total de contatos
     $sqltotal = "SELECT idContato FROM tbcontatos";
     $qrtotal = mysqli_query($conexao, $sqltotal) or die(mysqli_error($conexao));
     $numtotal = mysqli_num_rows($qrtotal);
     $totalpagina = ceil($numtotal / $quantidade);
 
-    echo "<p>$numtotal contatos</p>";
-    echo '<a href="?menuop=contatos&pagina=1">Primeira página</a>';
+    // Exibir total de contatos
+    echo "<p>Total de contatos: <strong>$numtotal</strong></p>";
 
+    // Link para a primeira página
+    echo '<a href="?menuop=contatos&pagina=1" class="link-paginacao">Primeira página</a>';
+
+    // Botão "anterior" caso esteja além da página 6
     if ($pagina > 6) {
-        echo '<a href="?menuop=contatos&pagina=' . ($pagina - 1) . '"> << </a>';
-        
+        echo '<a href="?menuop=contatos&pagina=' . ($pagina - 1) . '" class="link-paginacao"><<</a>';
     }
 
+    // Gerar os números das páginas com limite de ±5 páginas em relação à atual
     for ($i = 1; $i <= $totalpagina; $i++) {
         if ($i >= ($pagina - 5) && $i <= ($pagina + 5)) {
             if ($i == $pagina) {
                 echo "<span class='pagina-atual'>$i</span>";
             } else {
-                echo "<a href=\"?menuop=contatos&pagina=$i\">$i</a>";
+                echo "<a href=\"?menuop=contatos&pagina=$i\" class=\"link-paginacao\">$i</a>";
             }
         }
     }
 
+    // Botão "próximo" caso haja mais de 5 páginas restantes
     if ($pagina < ($totalpagina - 5)) {
-        echo '<a href="?menuop=contatos&pagina=' . ($pagina + 1) . '"> >> </a>';
+        echo '<a href="?menuop=contatos&pagina=' . ($pagina + 1) . '" class="link-paginacao">>></a>';
     }
 
-    echo "<a href=\"?menuop=contatos&pagina=$totalpagina\">Última página</a>";
+    // Link para a última página
+    echo "<a href=\"?menuop=contatos&pagina=$totalpagina\" class=\"link-paginacao\">Última página</a>";
     ?>
 </div>
