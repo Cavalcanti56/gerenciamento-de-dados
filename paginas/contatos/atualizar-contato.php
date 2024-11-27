@@ -1,5 +1,5 @@
 <header>
-    <h3>Atualizar Contato</h3>
+  <h3>Editar Contato</h3>
 </header>
 <?php
   $idContato =   mysqli_real_escape_string($conexao,$_POST["idContato"]);

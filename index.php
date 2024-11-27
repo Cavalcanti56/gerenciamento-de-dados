@@ -13,6 +13,13 @@ include("./db/conexao.php");
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Gerenciamento de contatos pessoais</title>
     
+    <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    </style>
 </head>
 <body>
     <header class="bg-dark">
