@@ -101,23 +101,23 @@ $dados = mysqli_fetch_assoc($rs);
                 <input type="text" name="idContato" id="idContato" value="<?= $dados["idContato"] ?>" readonly>
             </div>
             <div>
-                <label for="nomeContato">Nome</label>
+                <label for="nomeContato">Nome:</label>
                 <input type="text" name="nomeContato" id="nomeContato" value="<?= $dados["nomeContato"] ?>" required>
             </div>
             <div>
-                <label for="emailContato">E-mail</label>
+                <label for="emailContato">E-mail:</label>
                 <input type="email" name="emailContato" id="emailContato" value="<?= $dados["emailContato"] ?>" required>
             </div>
             <div>
-                <label for="telefoneContato">Telefone</label>
+                <label for="telefoneContato">Telefone:</label>
                 <input type="text" name="telefoneContato" id="telefoneContato" value="<?= $dados["telefoneContato"] ?>" required>
             </div>
             <div>
-                <label for="enderecoContato">Endereço</label>
+                <label for="enderecoContato">Endereço:</label>
                 <input type="text" name="enderecoContato" id="enderecoContato" value="<?= $dados["enderecoContato"] ?>" required>
             </div>
             <div>
-                <label for="sexoContato">Sexo</label>
+                <label for="sexoContato">Sexo:</label>
                 <select name="sexoContato" id="sexoContato" required>
                 <option value=" ">Selecione o sexo:</option>
                 <option value="F">Feminino</option>
@@ -125,7 +125,7 @@ $dados = mysqli_fetch_assoc($rs);
             </select>
             </div>
             <div>
-                <label for="dataNascContato">Data de Nascimento</label>
+                <label for="dataNascContato">Data de Nascimento:</label>
                 <input type="date" name="dataNascContato" id="dataNascContato" value="<?= $dados["dataNascContato"] ?>" required>
             </div>
             <div>

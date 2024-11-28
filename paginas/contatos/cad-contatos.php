@@ -108,9 +108,9 @@
             <input type="text" name="enderecoContato" id="enderecoContato">
         </div>
         <div>
-            <label for="sexoContato">Sexo (M ou F):</label>
+            <label for="sexoContato">Sexo:</label>
             <select name="sexoContato" id="sexoContato">
-                <option value=" " selected>Selecione o sexo:</option>
+                <option value=" ">Selecione o sexo:</option>
                 <option value="F">Feminino</option>
                 <option value="M">Masculino</option>
             </select>
