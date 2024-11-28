@@ -79,6 +79,14 @@ $dados = mysqli_fetch_assoc($rs);
         input[type="submit"]:hover {
             background-color: #008c9e;
         }
+        select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #333333;
+            border-radius: 5px;
+            background-color: #2c2c2c;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
@@ -110,7 +118,11 @@ $dados = mysqli_fetch_assoc($rs);
             </div>
             <div>
                 <label for="sexoContato">Sexo</label>
-                <input type="text" name="sexoContato" id="sexoContato" value="<?= $dados["sexoContato"] ?>" required>
+                <select name="sexoContato" id="sexoContato" required>
+                <option value=" ">Selecione o sexo:</option>
+                <option value="F">Feminino</option>
+                <option value="M">Masculino</option>
+            </select>
             </div>
             <div>
                 <label for="dataNascContato">Data de Nascimento</label>
@@ -121,4 +133,14 @@ $dados = mysqli_fetch_assoc($rs);
             </div>
         </form>
     </div>
+    <?php
+        $sexoContato = $dados["sexoContato"];
+        ?>
+        
+        <!-- // Usado para ajustar o valor selecionado depois que a página é carregada. -->
+        <script>
+            const sexoContato = "<?= $sexoContato ?>";
+            document.getElementById("sexoContato").value = sexoContato;
+        </script>
+
 </body>

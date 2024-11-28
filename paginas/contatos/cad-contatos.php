@@ -76,6 +76,14 @@
         input[type="submit"]:hover {
             background-color: #008c9e;
         }
+        select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #333333;
+            border-radius: 5px;
+            background-color: #2c2c2c;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
@@ -101,7 +109,11 @@
         </div>
         <div>
             <label for="sexoContato">Sexo (M ou F):</label>
-            <input type="text" name="sexoContato" id="sexoContato">
+            <select name="sexoContato" id="sexoContato">
+                <option value=" " selected>Selecione o sexo:</option>
+                <option value="F">Feminino</option>
+                <option value="M">Masculino</option>
+            </select>
         </div>
         <div>
             <label for="dataNascContato">Data de Nascimento:</label>
