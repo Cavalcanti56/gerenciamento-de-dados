@@ -24,6 +24,9 @@
   <h3 class="up">Editar Contato</h3>
 </header>
 <?php
+
+  //   Foi utilizada uma função para limpar a string de caracteres inválidos para o BD, previnindo o SQL Injection.
+
   $idContato =   mysqli_real_escape_string($conexao,$_POST["idContato"]);
   $nomeContato = mysqli_real_escape_string($conexao, $_POST["nomeContato"]); 
   $emailContato = mysqli_real_escape_string($conexao, $_POST["emailContato"]); 

@@ -245,7 +245,7 @@ h3 {
     echo '<a href="?menuop=contatos&pagina=1" class="link-paginacao">Primeira página</a>';
 
     // Botão "anterior" caso esteja além da página 6
-    if ($pagina > 6) {
+    if ($pagina > 2) {
         echo '<a href="?menuop=contatos&pagina=' . ($pagina - 1) . '" class="link-paginacao"><<</a>';
     }
 
@@ -261,7 +261,7 @@ h3 {
     }
 
     // Botão "próximo" caso haja mais de 5 páginas restantes
-    if ($pagina < ($totalpagina - 5)) {
+    if ($pagina < ($totalpagina - 1)) {
         echo '<a href="?menuop=contatos&pagina=' . ($pagina + 1) . '" class="link-paginacao">>></a>';
     }
 
