@@ -203,7 +203,6 @@ h3 {
             DATE_FORMAT(dataNascContato, '%d/%m/%Y') AS dataNascContato
             FROM tbcontatos 
             WHERE
-            idContato='{$txt_pesquisa}' or
             nomeContato LIKE '%{$txt_pesquisa}%' 
             LIMIT $inicio, $quantidade
             ";
@@ -225,14 +224,9 @@ h3 {
         <?php } ?>
     </tbody>
 </table>
-
 <div class="paginacao">
     <?php
     // Consulta total de contatos
-    $quantidade = 10;
-    $pagina = ( isset($_GET['pagina']) ) ?(int)$_GET['pagina']:1;
-    $inicio = ($quantidade * $pagina) - $quantidade;
-
     $sqltotal = "SELECT idContato FROM tbcontatos";
     $qrtotal = mysqli_query($conexao, $sqltotal) or die(mysqli_error($conexao));
     $numtotal = mysqli_num_rows($qrtotal);
@@ -244,7 +238,7 @@ h3 {
     // Link para a primeira página
     echo '<a href="?menuop=contatos&pagina=1" class="link-paginacao">Primeira página</a>';
 
-    // Botão "anterior" caso esteja além da página 6
+    // Botão "anterior" caso esteja além da página 2
     if ($pagina > 2) {
         echo '<a href="?menuop=contatos&pagina=' . ($pagina - 1) . '" class="link-paginacao"><<</a>';
     }
@@ -260,7 +254,7 @@ h3 {
         }
     }
 
-    // Botão "próximo" caso haja mais de 5 páginas restantes
+    // Botão "próximo" caso haja mais de 1 páginas restantes
     if ($pagina < ($totalpagina - 1)) {
         echo '<a href="?menuop=contatos&pagina=' . ($pagina + 1) . '" class="link-paginacao">>></a>';
     }
