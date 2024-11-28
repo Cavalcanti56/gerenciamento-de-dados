@@ -84,6 +84,10 @@
             background-color: #2c2c2c;
             color: #ffffff;
         }
+        select:focus {
+            border-color: #00bcd4;
+            outline: none;
+        }
     </style>
 </head>
 <body>
