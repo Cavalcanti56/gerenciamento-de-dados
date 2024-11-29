@@ -44,8 +44,8 @@ h3 {
     background-color: #0056b3;
 }
 .pesquisa form {
-    display: flex; /* Alinha os elementos horizontalmente */
-    gap: 10px; /* Espaço entre os elementos */
+    display: flex;
+    gap: 10px;
 }
 
 
@@ -57,7 +57,7 @@ h3 {
     margin-right: 10px;
 }
 .pesquisa{
-    text-align: left; /* Alinha a barra de pesquisa à esquerda */
+    text-align: left;
     margin: 20px 0;
 }
 
@@ -66,13 +66,13 @@ h3 {
     border-collapse: separate;
     border-spacing: 0;
     margin: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ajuste de sombra para combinar com o tema escuro */
-    background-color: #1e1e1e; /* Fundo geral da tabela */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    background-color: #1e1e1e;
 }
 
 .tabela-contatos th {
-    background-color: #333333; /* Fundo do cabeçalho */
-    color: #ffffff; /* Texto claro para contraste */
+    background-color: #333333; 
+    color: #ffffff;
     padding: 15px;
     text-align: left;
     font-size: 14px;
@@ -84,18 +84,18 @@ h3 {
 .tabela-contatos td {
     padding: 12px;
     font-size: 13px;
-    color: #e0e0e0; /* Texto claro para células */
-    background-color: #2b2b2b; /* Fundo das células */
-    border-bottom: 1px solid #444444; /* Bordas discretas */
+    color: #e0e0e0; 
+    background-color: #2b2b2b; 
+    border-bottom: 1px solid #444444; 
     vertical-align: middle;
 }
 
 .tabela-contatos tr:nth-child(even) td {
-    background-color: #242424; /* Fundo alternado para linhas pares */
+    background-color: #242424; 
 }
 
 .tabela-contatos tr:hover td {
-    background-color: #3a3a3a; /* Fundo ao passar o mouse */
+    background-color: #3a3a3a; 
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -104,53 +104,53 @@ h3 {
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 4px;
-    background-color: #03a9f4; /* Azul vibrante para links */
+    background-color: #03a9f4; 
     color: white;
     font-size: 12px;
     transition: background-color 0.3s ease;
 }
 
 .tabela-contatos a:hover {
-    background-color: #0288d1; /* Tom mais escuro ao passar o mouse */
+    background-color: #0288d1; 
 }
 
 .tabela-contatos .btn-excluir {
-   background-color: red; /* Vermelho escuro */
+   background-color: red; 
 }
 
 .tabela-contatos .btn-excluir:hover {
-    background-color: #c62828; /* Tom mais escuro ao passar o mouse */
+    background-color: #c62828; 
 
 }
 
 <style>
     .paginacao {
-        background-color: #2c2c2c; /* Fundo escuro */
+        background-color: #2c2c2c; 
         padding: 15px;
         border-radius: 8px;
         text-align: center;
-        color: #fff; /* Texto branco */
+        color: #fff; 
         font-family: Arial, sans-serif;
     }
 
     .paginacao a {
-        color: #1e90ff; /* Cor dos links */
+        color: #1e90ff; 
         text-decoration: none;
         margin: 0 5px;
         padding: 5px 10px;
-        border: 1px solid #1e90ff; /* Borda azul */
+        border: 1px solid #1e90ff; 
         border-radius: 4px;
         transition: background-color 0.3s, color 0.3s;
     }
 
     .paginacao a:hover {
-        background-color: #1e90ff; /* Fundo azul ao passar o mouse */
-        color: #fff; /* Texto branco ao passar o mouse */
+        background-color: #1e90ff; 
+        color: #fff; 
     }
 
     .paginacao .pagina-atual {
-        background-color: #4caf50; /* Fundo verde para página atual */
-        color: #fff; /* Texto branco */
+        background-color: #4caf50; 
+        color: #fff; 
         font-weight: bold;
         padding: 5px 10px;
         border-radius: 4px;

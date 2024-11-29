@@ -6,7 +6,6 @@ $rs = mysqli_query($conexao, $sql) or die("Erro ao recuperar os dados do contato
 $dados = mysqli_fetch_assoc($rs);
 ?>
 <style>
-        /* Estilos globais */
         body {
             font-family: Arial, sans-serif;
             background-color: #121212;

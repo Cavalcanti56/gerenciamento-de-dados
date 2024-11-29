@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Contatos</title>
     <style>
-        /* Estilos globais */
         body {
             font-family: Arial, sans-serif;
             background-color: #121212;
@@ -25,7 +24,6 @@
             margin-bottom: 20px;
         }
 
-        /* Estilo do formulário */
         form {
             background-color: #1e1e1e;
             padding: 20px;
@@ -35,7 +33,6 @@
             width: 100%;
         }
 
-        /* Estilo dos campos */
         form div {
             margin-bottom: 15px;
             display: flex;
