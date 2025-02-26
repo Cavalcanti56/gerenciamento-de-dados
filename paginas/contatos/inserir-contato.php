@@ -39,6 +39,7 @@
     </header>
 
       <?php
+
         $nomeContato = mysqli_real_escape_string($conexao, $_POST["nomeContato"]); 
         $emailContato = mysqli_real_escape_string($conexao, $_POST["emailContato"]); 
         $telefoneContato = mysqli_real_escape_string($conexao, $_POST["telefoneContato"]); 
@@ -64,16 +65,14 @@
           '{$enderecoContato}',
           '{$sexoContato}',
           '{$dataNascContato}'
-        )
-        ";mysqli_query($conexao,$sql) or die ("Erro ao criar o contato!" . mysqli_error($conexao));
-          echo "<div class='sucess'>O contato foi criado com sucesso!</div>";
+          )
 
+          ";mysqli_query($conexao,$sql) or die ("Erro ao criar o contato!" . mysqli_error($conexao));
+          echo "<div class='sucess'>O contato foi criado com sucesso!</div>"
+         
+          
       ?>
 
   </div>
 </body>
 </html>
-
-
-
-
